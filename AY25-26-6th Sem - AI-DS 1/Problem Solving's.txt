@@ -1,0 +1,93 @@
+Problem Solving's:
+
+21/04/2025 - FN
+1. Consider the group of deposits done by bank today with numbers and manager wants to find out the least deposit. so assist the manager by providing solution to identify the least deposit.
+
+2. In the given list contains the 10 tax payers of financial year 2024-2025, among the auditor wants to find the first and second highest tax payer. so find the solution to support the auditor.
+
+3. In the super market end of each day finding the raised bills to customer with invoice number, now find the missing invoice of the day.
+
+Example:
+Input:
+8,10,3,1,4,2,5
+Output:
+6
+Input:
+45,91,90,92,46
+Output:
+47
+Input:
+0,1,2,4,5,6,7
+Output:
+3
+
+
+4. IPL Bowlers stats of every over how many runs he has given to opposite team, now find the maiden overs at the last of his stats.
+
+example:
+Input:
+20,0,19,5,0,3,10,0,2
+Output:
+20,19,5,3,10,2,0,0,0
+
+Input:
+3,0,0,1,0,5,0,6,0
+Output:
+3,1,5,6,0,0,0,0,0
+
+21/04/2025 - AN
+
+5. Assume that your are part of support team in IRCTC app where customers would raise issue and it will be considered priority ticket such as 0, 1 and 2. now today tickets are in the bucket and you need to arrange it by priority
+Example:
+Input:
+2,0,0,1,0,2,0,1
+Output:
+0,0,0,0,1,1,2,2
+
+6. Find and apply charges of 20 each extra debit more than 3 in last 10 transaction of your account which has credit and debit combination
+
+Example:
+Input:
+900,1200,5600,120,450,670,100,10000,400,120
+Output:
+900,1200,5600,120,450,670,100,10000,400,100
+
+7. Given an array nums of positive integers of size N. Find all distinct digits present in nums.
+Example 1:
+Input: nums = [131, 11, 48]
+Output: 1 3 4 8
+Explanation: 1, 3, 4, and 8 are only distinct
+digits that can be extracted from the numbers
+of the array.
+Example 2:
+Input: nums = [111, 222, 333, 4444, 666]
+Output: 1 2 3 4 6
+Explanation: 1, 2, 3, 4, and 6 are only distinct
+digits that can be extracted from the numbers
+of the array.
+
+8. Equilibrium index:
+Example:
+Input:
+-7, 1, 5, 2, -4, 3, 0
+Output:
+3
+Input:
+0,-3,5,-4,-2,3,1,0
+Output:
+0
+
+
+
+
+Assignment:
+1. 
+
+
+
+
+
+
+
+
+
