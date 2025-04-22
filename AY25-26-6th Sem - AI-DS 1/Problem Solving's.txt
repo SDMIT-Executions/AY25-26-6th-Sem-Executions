@@ -78,12 +78,82 @@ Output:
 0
 
 
+Assignment of Day1:
+1. Prefix and post fix sum of list
+2. Rotating clock wise and anti clock wise
 
 
-Assignment:
-1. 
 
 
+22/04/2025 - FN
+Given an array arr[] of positive integers. Your task is to sort them so that the first part of the array contains odd numbers sorted in descending order, and the rest of the portion contains even numbers sorted in ascending order.
+Examples:
+Input: arr[] = [1, 2, 3, 5, 4, 7, 10]
+Output: [7, 5, 3, 1, 2, 4, 10]
+Explanation: 7 5 3 1 are odds in descending order and 2 4 10 are evens in ascending order.
+Input: arr[] = [0, 4, 5, 3, 7, 2, 1]
+Output: [7, 5, 3, 1, 0, 2, 4]
+Explanation: 7 5 3 1 are odds in descending order and 0 2 4 are evens in ascending order.
+
+Given two strings A and B, find if A is a subsequence of B.
+Example 1:
+Input:
+A = AXY 
+B = YADXCP
+Output: 0 
+Explanation: A is not a subsequence of B
+as 'Y' appears before 'A'.
+
+Example 2:
+Input:
+A = sdm
+B = sridharmashthlamanjunath
+Output: 1
+Explanation: A is a subsequence of B.
+
+Example 3:
+Input:
+A = sdmit
+B = sridharmashthlainstitute
+Output: 0
+Explanation: A is not a subsequence of B.
+
+Consider the following array is account balance of last 7 transactions, find the period of time (subSum) where the max amount kept in the account.
+(max sub array where sum is max)
+eg:
+Input:
+2, -4, 1, 9, -6, 7, -3
+output:
+10
+
+Input:
+-2, 1, 3, -3, 4, -1, 2, 1, -5, 4
+Output:
+7
+
+Minimum Moves to Convert String
+You are given a string s consisting of n characters which are either 'X' or 'O'.
+A move is defined as selecting three consecutive characters of s and converting them to 'O'. Note that if a move is applied to the character 'O', it will stay the same.
+Return the minimum number of moves required so that all the characters of s are converted to 'O'.
+Example 1:
+Input: s = "XXX"
+Output: 1
+Explanation: XXX -> OOO
+We select all the 3 characters and convert them in one move.
+Example 2:
+Input: s = "XXOX"
+Output: 2
+Explanation: XXOX -> OOOX -> OOOO
+We select the first 3 characters in the first move, and convert them to 'O'.
+Then we select the last 3 characters and convert them so that the final string contains all 'O's.
+Example 3:
+Input: s = "OOOO"
+Output: 0
+Explanation: There are no 'X's in s to convert.
+
+Divide and Conquer: Binary search, Merge sort
+Sum using Recursion
+Linear search via recursion
 
 
 
