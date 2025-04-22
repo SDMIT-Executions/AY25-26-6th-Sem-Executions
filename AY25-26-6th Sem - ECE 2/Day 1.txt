@@ -1,0 +1,171 @@
+Day 1:
+
+A store offers the following discount policy based on the total purchase amount:
+If the total purchase is greater than ₹5000, the customer gets a 20% discount.
+If the total purchase is greater than or equal to ₹3000 and less than or equal to ₹5000, the customer gets a 10% discount.
+Otherwise, there is no discount.
+Output:
+Sample Input1: 
+Enter total purchase amount: 6200
+Sample output1: 
+Discount amount: Rs.1240.0
+Final amount to pay: Rs.4960.0
+
+Solution:
+
+int main() {
+    float purchaseAmount, discount, finalAmount;
+    cout << "Enter total purchase amount: ";
+    cin >> purchaseAmount;
+    if (purchaseAmount > 5000) {
+        discount = purchaseAmount * 0.20;
+    } else if (purchaseAmount >= 3000) {
+        discount = purchaseAmount * 0.10;
+    } else {
+	cout << "No discount applicable."
+	discount=0.0;
+}
+    finalAmount = purchaseAmount - discount;
+    if (discount > 0){
+        cout << "Discount amount: ₹" << discount << endl;
+    }
+    cout << "Final amount to pay: ₹" << finalAmount << endl;
+
+--------------------------------
+2. A school software needs to validate characters entered by students.
+Write a program to check if a character is:
+An uppercase letter (A-Z)
+A lowercase letter (a-z)
+Not a letter (e.g., digits or symbols)
+Output:
+Sample Input1: 
+Enter a character: G
+Sample output1: 
+G is an uppercase letter
+
+Solution:
+
+int main() {
+    char ch;
+    cout << "Enter a character: ";
+    cin >> ch;
+    if (ch >= 'A' && ch <= 'Z') {
+        cout << ch << " is an uppercase letter." << endl;
+    } else if (ch >= 'a' && ch <= 'z') {
+        cout << ch << " is a lowercase letter." << endl;
+    } else {
+        cout << ch << " is not a letter." << endl;
+    }
+
+3. Electricity Billing System
+--------------------------
+1. Residential (₹3/unit)
+2. Commercial (₹5/unit)
+3. Industrial (₹8/unit)
+Input:
+Enter customer type (1-3): 1
+Enter units consumed: 150
+Output:
+Customer Type: Residential
+Rate per unit: Rs.3
+Total Bill: Rs.450
+
+Solution:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int customerType;
+    float units, rate, total;
+    cout << "Electricity Billing System\n";
+    cout << "--------------------------\n";
+    cout << "1. Residential (₹3/unit)\n";
+    cout << "2. Commercial (₹5/unit)\n";
+    cout << "3. Industrial (₹8/unit)\n";
+    cout << "Enter customer type (1-3): ";
+    cin >> customerType;
+    cout << "Enter units consumed: ";
+    cin >> units;
+    switch (customerType) {
+        case 1:
+            rate = 3.0;
+            total = units * rate;
+            cout << "Customer Type: Residential\n";
+            cout << "Rate per unit: ₹" << rate << endl;
+            cout << "Total Bill: ₹" << total << endl;
+            break;
+        case 2:
+            rate = 5.0;
+            total = units * rate;
+            cout << "Customer Type: Commercial\n";
+            cout << "Rate per unit: ₹" << rate << endl;
+            cout << "Total Bill: ₹" << total << endl;
+            break;
+        case 3:
+            rate = 8.0;
+            total = units * rate;
+            cout << "Customer Type: Industrial\n";
+            cout << "Rate per unit: ₹" << rate << endl;
+            cout << "Total Bill: ₹" << total << endl;
+            break;
+        default:
+            cout << "Invalid customer type. Please enter 1, 2, or 3.\n";
+    }
+    return 0;
+}
+
+4. Create a program that takes a month number (1 to 12) as input and prints the number of days in that month using a switch-case. Handle invalid inputs gracefully.
+Month-Day Rules:
+31 days → January, March, May, July, August, October, December → (1, 3, 5, 7, 8, 10, 12)
+30 days → April, June, September, November → (4, 6, 9, 11)
+28 or 29 days → February → (2)
+
+Solution:
+
+int main() {
+    int month;
+    cout << "Enter month number (1-12): ";
+    cin >> month;
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            cout << "This month has 31 days." << endl;
+            break;
+        case 4: case 6: case 9: case 11:
+            cout << "This month has 30 days." << endl;
+            break;
+case 2:
+            cout << "This month has 28 or 29 days (leap year dependent)." << endl;
+            break;
+  default:
+            cout << "Invalid month number. Please enter a value between 1 and 12." << endl;
+    }
+    return 0; }      
+
+5. Character toggle
+
+A school software needs to validate characters entered by students.
+Write a program to check if a character is:
+An uppercase letter (A-Z)
+A lowercase letter (a-z)
+Not a letter (e.g., digits or symbols)
+Output:
+Sample Input1: 
+Enter a character: G
+Sample output1: 
+G is an uppercase letter
+
+Solution:
+
+int main() {
+    char ch;
+    cout << "Enter a character: ";
+    cin >> ch;
+    if (ch >= 'A' && ch <= 'Z') {
+        cout << ch << " is an uppercase letter." << endl;
+    } else if (ch >= 'a' && ch <= 'z') {
+        cout << (char)(ch+32);
+    } else {
+        cout << (char)(ch+32);
+    }
+
+
