@@ -79,14 +79,16 @@ Output:
 
 
 Assignment of Day1:
-1. Prefix and post fix sum of list
-2. Rotating clock wise and anti clock wise
+1. Rotating clock wise and anti clock wise
+
+
+
 
 
 
 
 22/04/2025 - FN
-Given an array arr[] of positive integers. Your task is to sort them so that the first part of the array contains odd numbers sorted in descending order, and the rest of the portion contains even numbers sorted in ascending order.
+1. Given an array arr[] of positive integers. Your task is to sort them so that the first part of the array contains odd numbers sorted in descending order, and the rest of the portion contains even numbers sorted in ascending order.
 Examples:
 Input: arr[] = [1, 2, 3, 5, 4, 7, 10]
 Output: [7, 5, 3, 1, 2, 4, 10]
@@ -95,14 +97,59 @@ Input: arr[] = [0, 4, 5, 3, 7, 2, 1]
 Output: [7, 5, 3, 1, 0, 2, 4]
 Explanation: 7 5 3 1 are odds in descending order and 0 2 4 are evens in ascending order.
 
-Given two strings A and B, find if A is a subsequence of B.
+2. Assume that grocery shop generating bills with different amount, now the shopkeeper wants to cumulate the bills. so help him to find total revenue by using recursion
+Example:
+Input:
+[900,20,450,210,60]
+Output:
+1640
+
+3. Merge sort
+
+4. Find the ranking of your skill set in google trends ranking of 10 demanded trends such as [Java developer, cloud architect, data analyst, devops engineer ,full stack developer, network associate] using binary search
+Example:
+Input: data analyst
+Output: 3
+Input: Devops engineer
+Output: -1
+Input: full stack developer
+Output: 5
+
+
+
+
+22/04/2025 - AN
+5. Using recursion find the inversion of count
+You are working for an e-commerce company that deals with a large volume of customer orders. The company wants to optimize its warehouse operations by analyzing the efficiency of order processing.
+The goal is to count the number of inversion pairs in the order processing times to identify potential inefficiencies. An inversion pair in this context is defined as a situation where a later order (in terms of processing sequence) took less time to process than an earlier order. By identifying these inversions, you can pinpoint areas where the warehouse team may need to improve their workflow or processes.
+Input
+An array P[] of n integers representing the processing times of orders, in the order they were processed.
+Output
+The count of inversion pairs in the array.
+
+Example
+Input:
+P[] = [30, 45, 25, 60, 20]
+Output:
+The inversion count is 6
+Explanation: There are 5 inversion pairs in the array:
+(45, 25) where 45 > 25 and 
+(45, 20) where 45 > 20 and 
+(30, 25) where 30 > 25 and 
+(30, 20) where 30 > 20 and 
+(60, 20) where 60 > 20 and 
+(25, 20) where 25 > 20 and 
+
+
+
+6. Given two strings A and B, find if A is a subsequence of B.
 Example 1:
 Input:
-A = AXY 
-B = YADXCP
-Output: 0 
+A = TCS
+B = Tata Service
+Output: 0
 Explanation: A is not a subsequence of B
-as 'Y' appears before 'A'.
+as 'C' appears after 'S'
 
 Example 2:
 Input:
@@ -118,20 +165,8 @@ B = sridharmashthlainstitute
 Output: 0
 Explanation: A is not a subsequence of B.
 
-Consider the following array is account balance of last 7 transactions, find the period of time (subSum) where the max amount kept in the account.
-(max sub array where sum is max)
-eg:
-Input:
-2, -4, 1, 9, -6, 7, -3
-output:
-10
 
-Input:
--2, 1, 3, -3, 4, -1, 2, 1, -5, 4
-Output:
-7
-
-Minimum Moves to Convert String
+7. Minimum Moves to Convert String
 You are given a string s consisting of n characters which are either 'X' or 'O'.
 A move is defined as selecting three consecutive characters of s and converting them to 'O'. Note that if a move is applied to the character 'O', it will stay the same.
 Return the minimum number of moves required so that all the characters of s are converted to 'O'.
@@ -151,13 +186,21 @@ Input: s = "OOOO"
 Output: 0
 Explanation: There are no 'X's in s to convert.
 
-Divide and Conquer: Binary search, Merge sort
-Sum using Recursion
-Linear search via recursion
 
+Practice:
+1. Prefix and post fix sum of list using recursion
+Input:
+23,12,98,45,18,45,12,98
+Output:
+Prefix Sum:
+98, 110, 155, 173, 218, 316, 328, 351
+Postfix Sum:
+23, 35, 133, 178, 196, 241, 253, 351
 
-
-
-
-
-
+2. Consider the following array is account balance of last 7 transactions, find the period of time (subSum) where the max amount kept in the account.
+(max sub array where sum is max)
+eg:
+Input: 2, -4, 1, 9, -6, 7, -3
+output: 11
+Input: 2, -4, 1, 9, -6, -3
+Output: 10
