@@ -1,0 +1,323 @@
+C - 32 keywords
+Java - Initially - 50 keywords 
+      version 8 - added 3 keyword (true, false, null)- 53 (goto , const - reserved keywords for future use)
+
+Reserved words 
+for , if , int - examples
+------------------
+main()
+{
+int i=4,x;
+x=++i + ++i + ++i;
+ printf("I is : %d",x);
+getch();
+}
+--------------
+main()
+{
+int a=10;
+int b;
+b= -a; // unary operator - b = -10
+b=20-a; // binary operator b=10
+}
+----------------------
+C random number - returns static random numbers
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int i;
+for( i = 0 ; i < 5 ; i++ ) 
+   {
+      printf("%d ", rand() % 50);
+   }
+   
+return 0;
+}
+
+Python Random Numbers - returns dynamic random numbers
+
+import random
+
+for i in range(5):
+    print(random.randint(1,50),end =" ")
+-----------------------------------------------------------
+// swapping using third variable
+main()
+{
+int a=10,b=5,c;
+c=a;
+a=b;
+b=c;
+printf("a is : %d",a);
+printf("b is : %d",b);
+}
+-------------------------------------------------------
+// swapping without using third variable
+main()
+{
+int a=10,b=5;
+a=a+b; // a =15
+b=a-b; // b= 10
+a=a-b; // a= 5
+printf("a is : %d",a);
+printf("b is : %d",b);
+}
+----------------------------------------
+// swapping without using third variable
+main()
+{
+int a=10,b=5;
+a=a+b; // a =15
+b=a-b; // b= 10
+a=a-b; // a= 5
+printf("a is : %d",a);
+printf("b is : %d",b);
+}
+----------------------------------
+interview question:
+
+// swapping three values without using fourth variable
+main()
+{
+int a=10,b=5,c=7;
+ 
+printf("a is : %d",a);
+printf("b is : %d",b);
+printf("c is : %d",c);
+}
+------------------------
+a=10
+b=20
+
+b,a=a,b # python alone support this swapping statement 
+print("a is " , a)
+print("b is ",b)
+
+'''
+optimized code - space and time complexity
+'''
+--------------------------
+Datatype :
+
+1. primitive
+   1. numeric
+        1. default - int ,float
+        2. derived - long,double
+
+   2. non numeric
+       char
+       
+2. non primitive
+-------------------------
+Statement :
+
+
+int a;
+a=10; 
+int a=10;
+c=a+b; 
+
+control statement
+1. decision making
+     1. if
+           1. if (cond) 2. if (cond) ... else 3. if(cond)... else if(cond)... else if(cond) ... else ... (ladder if)
+            4. if (cond) ...  if(cond) .... else .... if(cond)
+     2.switch
+     3.  ternary / conditional
+
+2.Looping
+   1. for 2. do 3. while
+
+---------------------------------------------------
+Question : Find digit of given number
+
+input 1: 25
+output1: Double Digit
+
+input 2: 5
+output2: Single Digit
+
+input 3: 250
+output3: Triple Digit
+
+input 4: 2500
+output4: Not in range
+---------------------------------------------------
+main()
+{
+int no;
+printf("Enter No : ");
+scanf("%d",&no);
+
+if(no>=0 && no<10)
+printf("Single Digit");
+else if(no>=10 && no<100)
+printf("Double Digit");
+else if(no>=100 && no<1000)
+printf("Triple Digit");
+else
+printf("Not in range");
+}
+------------------------
+Ascii - 
+A -  65
+a - 97
+--------------------
+#include <stdio.h>
+int main()
+{
+    char ch;   
+    int ascii;
+    printf("Enter a Character :");
+    scanf("%c",&ch);
+    ascii=ch;
+    printf("Char : %c - Ascii : %d",ch,ascii);
+    return 0;
+}
+--------------------
+Question : Find a category of given character.
+input 1: C
+output 1: Capital Letter
+
+input 2: c
+output 2: Small Letter
+
+input 3: 7
+output 3: Numeric
+
+input 4: +
+output 4: Symbol
+
+main()
+{
+char ch;
+int ascii;
+printf("Enter Character : ");
+scanf("%c",&ch);
+ascii=ch;
+if(ascii>=65 && ascii<=90)
+printf("Capital Letter");
+else if(ascii>=97 && ascii<=122)
+printf("Small Letter");
+else if(ascii>=48 && ascii<=57)
+printf("Numeric");
+else if(ascii>=33 && ascii<=47 || ascii>=58 && ascii<=64)
+printf("Symbol");
+}
+----------------------------------------------
+Question: Print all ascii characters with code using for Loop
+main()
+{
+char c;
+for(int i=0;i<=255;i++)
+{
+c=i;
+printf(" %c : %d",c,i);
+}
+}
+----------------------------------------------
+Python and java supports Unicode characters:
+
+Unicode - more than 65533 
+Unicode char contains all human languages.
+----------------------------------------------
+for i in range(3200,3328):
+    print(chr(i),end =" ")
+----------------------------------------------
+main()
+{
+char ch;
+int ascii;
+printf("Enter Character : ");
+scanf("%c",&ch);
+ascii=ch;
+if(ascii>=65 && ascii<=90)
+printf("Capital Letter");
+else if(ascii>=97 && ascii<=122)
+printf("Small Letter");
+else if(ascii>=48 && ascii<=57)
+printf("Numeric");
+else if(ascii>=33 && ascii<=47 || ascii>=58 && ascii<=64)
+printf("Symbol");
+}
+----------------------------------------------
+Question : Print table
+
+input 1: 5 10
+output 1:
+1 * 5 = 5
+2 * 5 = 10
+3 * 5 = 15
+.
+.
+.
+10 * 5 = 50
+
+main()
+{
+int table,no; 
+printf("Enter No : ");
+scanf("%d",&no);
+
+printf("Enter Table : ");
+scanf("%d",&table);
+
+for(int i=1;i<=no;i++)
+{
+printf("\n%d * %d = %d",i,table,(i*table));
+}
+}
+----------------------------------------------
+Types of Pattern Programs
+1. Number Pattern
+2. Character Pattern
+3. Star Pattern
+4. Hallow pattern
+5. Pyramid Pattern
+-------------------------
+1. How many rows?
+2. How many Cols
+3. What to print in a cell (combination of rows and cols) ?
+-------------------
+Ex1 : Swap 3 values without using fourth variable 
+
+Ex 2 : Print X pattern
+
+*                     *
+    *             *
+       *      *
+          *
+       *     *
+    *           *
+ *                  *
+
+Ex 3 : Print Z pattern 
+
+*   *   *   *   *   *
+                     *
+                 *
+            *
+          *
+       *     
+    *          
+*   *   *   *   *   *               
+
+================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

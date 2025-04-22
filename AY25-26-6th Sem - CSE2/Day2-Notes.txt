@@ -1,0 +1,266 @@
+13 Pattern Programs Completed .
+---------------------------------------------------
+What is Program?
+What is Project?
+Software
+1. Application
+    1. Packages (Notepad, Paint, calc, Calendar, MS Office .... ) 
+    2. Languages 
+2. System
+
+https://peterindia.net/MarkupLanguages.html
+--------------------------
+Software Vs Project
+Licenced projects are called software
+----------------------------
+OOPS - 
+----------------
+LTS - Long Term Support
+Java - 8 , 17, 21
+(Most reliable)
+
+Android invented by Andy Rubin - 2003 - Android Inc
+Google purchased android year of 2005 - 50 millions dollars
+Astro - First Version
+Latest Version - Venilla Ice cream
+-------------------
+Java introduced by sun microsystem
+Later (2010) Oracle purchased java from  sun microsystem.
+------------------
+-----------------
+public class Prg1 {
+	public static void main(String aa[]) {
+		System.out.println("Welcome To Java");
+	}
+}
+
+/*
+public - Access specifier
+(4 Access specifier in java - public , private , protected, default)
+class - keyword
+prg1 - class name
+static - (one of the storage class)
+auto, static, extern , register
+Storage classes related to memory and life time of variable.
+java is using only static .
+String , System are predefined class.
+These classes stored in java.lang package
+package similar to header file.
+java.lang is default package (No need to import)
+aa[] - Array object
+out is the object of print stream
+println is a method
+*/
+
+public class Prg1 {
+	public static void main(String aa[]) {
+		float pi=3.144f; 
+		int r=5;
+		float area;
+		area =pi*r*r;
+		System.out.println("Area is : " + area);
+	}
+}
+/* double is a default decimal type */
+
+
+-------------------------------
+// To find character of given position from a string
+import java.util.Scanner;
+
+public class Prg1 { // Real time example 
+	public static void main(String aa[]) {
+		Scanner sc=new Scanner(System.in);
+		String s;
+		char ch;
+		System.out.print ("Enter Username : ");
+		s=sc.next();
+		System.out.print ("Enter Position : ");		
+		ch=s.charAt(sc.nextInt()-1);
+			System.out.print ("Character is : " + ch);
+		}
+	}
+ 
+ ---------------------------
+// Code to check Login credentials
+
+import java.util.Scanner;
+
+public class Prg1 { // Real time example 
+	public static void main(String aa[]) {
+		Scanner sc=new Scanner(System.in);
+		String username,password;
+		System.out.print ("Enter Username : ");
+		username=sc.next();
+		System.out.print ("Enter Password : ");
+		password=sc.next();
+		if(username.equals("sdmit") && password.equals("123"))
+		{
+			System.out.print ("Login Successfully");
+		}
+		else
+		{
+			System.out.print ("Invalid username and password ");
+		}
+		}
+}
+ --------------------------------
+
+import java.util.Scanner;
+
+public class Prg1 { // Real time example 
+	public static void main(String aa[]) {
+		Scanner sc=new Scanner(System.in);
+		String s;
+		int l=0;
+		System.out.print ("Enter Name : ");
+		s=sc.next();
+		 for(char c:s.toCharArray()) // enhanced for loop. designed for arrays and objects
+		 {
+			 l++;
+		 }
+		 System.out.print ("String Length is : " + l);
+		}
+	} // s.toCharArray() - to split characters from a string
+ // Exercise count the length of string without using predefined functions
+----------------------------------------------------
+import java.util.Scanner;
+
+public class Prg1 { // Real time example 
+	public static void main(String aa[]) {
+		Scanner sc=new Scanner(System.in);
+		String s;
+		int l=0;
+		int v=0;
+		System.out.print ("Enter Name : ");
+		s=sc.next();
+		for(char c:s.toCharArray()) // enhanced for loop. designed for arrays and objects
+		{
+			l++;
+			if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
+				v++;
+		}
+		System.out.println ("String Length is : " + l);
+		System.out.print ("Vowels count is : " + v);
+		System.out.print ("Consonents count is : " + (l-v));
+	}
+} 
+// Exercise count of vowels from given string
+----------------------------------------------------
+
+import java.util.Scanner;
+
+public class Prg1 { // Real time example 
+	public static void main(String aa[]) {
+		Scanner sc=new Scanner(System.in);
+		String s; 
+		int u=0,l=0,n=0,d;
+		System.out.print ("Enter a Sentence : ");
+		s=sc.nextLine(); // Can scan a sentence 		
+		System.out.print ("Sentence is : " + s);
+		for (char c:s.toCharArray())
+		{
+		d=c;
+		if(d>=65 && d<=90)
+			u++;
+		}
+		System.out.println ("\nCount of Capital Letters : "+u );
+	}
+} 
+// Exercise count capital letters , small letters and numbers from a sentence 
+-----------------------------------------------------------
+Write a java code to check a mobile number is Valid or Invalid without using any regular expression.
+import java.util.Scanner;
+
+public class Prg1 { // Real time example 
+	public static void main(String aa[]) {
+		Scanner sc=new Scanner(System.in);
+		String s;
+		int l=0,flag=0,d; 
+		System.out.print ("Enter mobile Number : ");
+		s=sc.next();
+		 for(char c:s.toCharArray()) // enhanced for loop. designed for arrays and objects
+		 {
+			 l++;
+			 d=c;
+			 if(d>=48 && d<=57)
+				 flag=0;
+			else
+			{
+				flag=1;	
+			    break;
+			}
+		 }
+		  if(flag==0 && l==10)
+			 System.out.print ("Valid Mobile Number");
+		 else
+			 System.out.print ("Invalid Mobile Number");		 
+		}
+
+	}  
+---------------------------------------------------------
+Create account in Leetcode.com
+
+58. Length of Last Word
+
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int count = 0;
+        for (int i=s.length()-1; i>=0; i--) {
+            System.out.println(count);
+            if (s.charAt(i)==' ' && count==0){
+                continue;
+            } else if (s.charAt(i)==' ' && count>0){
+                break;
+            } else {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+--------------------------------------------
+520. Detect Capital
+class Solution {
+    public boolean detectCapitalUse(String word) { 
+        if (word.equals(word.toUpperCase())) {
+            return true;
+        } 
+        if (word.equals(word.toLowerCase())) {
+            return true;
+        } 
+        if (Character.isUpperCase(word.charAt(0)) && 
+            word.substring(1).equals(word.substring(1).toLowerCase())) {
+            return true;
+        } 
+        return false;
+    }
+}
+
+/* Dont write main method in Leetcode */
+-----------------------------------------------------------------
+344. Reverse String
+
+class Solution {
+    public void reverseString(char[] s) { 
+        for (int i = 0, j = s.length - 1; i < s.length / 2; i++, j--) { 
+            char temp = s[i]; 
+            s[i] = s[j]; 
+            s[j] = temp;
+        }    
+    }
+}
+
+-----------------------------------------------------------------
+541. Reverse String II
+
+Try this question 
+-----------------------------------
+Tomorrow Test from Pattern Programs :
+3 Questions will come
+--------------------------------------------------------------------
+
+
+
+
+
