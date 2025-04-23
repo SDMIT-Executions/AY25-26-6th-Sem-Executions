@@ -192,10 +192,8 @@ Practice:
 Input:
 23,12,98,45,18,45,12,98
 Output:
-Prefix Sum:
-98, 110, 155, 173, 218, 316, 328, 351
-Postfix Sum:
-23, 35, 133, 178, 196, 241, 253, 351
+Prefix Sum: [23, 35, 133, 178, 196, 241, 253, 351]                         
+Postfix Sum: [351, 328, 316, 218, 173, 155, 110, 98]
 
 2. Consider the following array is account balance of last 7 transactions, find the period of time (subSum) where the max amount kept in the account.
 (max sub array where sum is max)
@@ -204,3 +202,130 @@ Input: 2, -4, 1, 9, -6, 7, -3
 output: 11
 Input: 2, -4, 1, 9, -6, -3
 Output: 10
+
+
+
+23/04/2025 - FN
+1. Twisted prime
+Note: A number is called Twisted Prime if it is a prime and its reverse is also a prime.
+Example 1:
+Input: N = 97
+Output: 1
+Explanation: 97 is a prime number. Its 
+reverse 79 is also a prime number. Thus 
+97 is a  twisted Prime and so, the answer is 1.
+Example 2:
+Input: N = 43
+Output: 0
+Explanation: 43 is a prime number but its 
+reverse 34 is not a prime.So, 43 is not a 
+twisted prime and thus, answer is 0.
+
+2. Find the least prime number within the boundary that can be added with first array element that makes them divisible by second array elements at respective index
+Input:
+int[] arr1 = {3, 5, 7};
+int[] arr2 = {10, 15, 20};
+Output:
+7 -1 13 
+Input:
+int[] arr1 = {4, 6, 8};
+int[] arr2 = {5, 10, 15};
+Output:
+-1 -1 -1
+
+
+
+
+3. Validating IPV4
+Input: s = "222.111.111.111"
+Output: true
+Explanation: Here, the IPv4 address is as per the criteria mentioned and also all four decimal numbers lies in the mentioned range.
+Input: s = "5555..555"
+Output: false
+Explanation: "5555..555" is not a valid. IPv4 address, as the middle two portions are missing.
+Input: s = "0.0.0.0255"
+Output: false
+
+4. This is one of the most popular coding problems which can be solved using the Dynamic Programming technique. In this problem, you are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. The question is, in how many distinct ways can you climb to the top?
+Note: Given n will be a positive integer.
+
+Example 1:
+Input: 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
+
+Example 2:
+Input: 3
+Output: 3
+Explanation: There are three ways to climb to the top.
+1. 1 step + 1 step + 1 step
+2. 1 step + 2 steps
+3. 2 steps + 1 step.
+
+Example 3:
+Input: 5
+Output: 8
+
+
+5. Find Factorial using Dynamic Programming
+
+
+
+
+
+
+23/04/2025 - AN
+
+6. You are working on a vending machine software that dispenses change. Given an unlimited supply of currencies of different denominations (e.g., 100, 200, 500 etc.), you need to write a program to determine the minimum number of currencies required to make a given amount x. The program should accept the amount x and the list of denominations as input and output the minimum number of currencies needed.
+Input
+denomination = [100, 200, 500]  , amount = 1100
+Output
+3
+amount = 8700
+Output:
+18
+
+
+7. Given an array of stock prices where each element represents the stock price on a specific day, write a function to find the best days to buy and sell the stock such that you achieve the maximum profit. You can only buy and sell the stock once.
+45, 12, 3, 10, 50
+Best time to buy 3 best time to sell 50
+
+-10, -5, -2, -1, 1
+Best time to buy -10 best time to sell 1
+
+90, 40, 20, 10, 4
+Best time to buy 10 best time to sell 4
+
+
+
+
+
+Practice:
+1. Given an unsorted integer array, print all distinct four elements tuple (quadruplets) in it, having a given sum.
+For example,
+Input:
+A[] = [2, 7, 4, 0, 9, 5, 1, 3]
+target = 20
+showing quadruplets:
+Output: Below are the quadruplets with sum 20
+ (0, 4, 7, 9)
+(1, 3, 7, 9)
+(2, 4, 5, 9)
+
+2. You are given a 0-indexed integer array nums and an integer k.
+You are initially standing at index 0. In one move, you can jump at most k steps forward without going outside the boundaries of the array. That is, you can jump from index i to any index in the range [i + 1, min(n - 1, i + k)] inclusive.
+You want to reach the last index of the array (index n - 1). Your score is the sum of all nums[j] for each index j you visited in the array.
+Return the maximum score you can get.
+Example 1:
+Input: nums = [1,-1,-2,4,-7,3], k = 2
+Output: 7
+Explanation: You can choose your jumps forming the subsequence [1,-1,4,3] (underlined above). The sum is 7.
+Example 2:
+Input: nums = [10,-5,-2,4,0,3], k = 3
+Output: 17
+Explanation: You can choose your jumps forming the subsequence [10,4,3] (underlined above). The sum is 17.
+Example 3:
+Input: nums = [1,-5,-20,4,-1,3,-6,-3], k = 2
+Output: 0
