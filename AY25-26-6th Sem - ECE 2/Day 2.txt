@@ -1,0 +1,131 @@
+Day 2
+
+1) Count Digits
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, count = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+    int temp = num;
+    while (temp != 0) {
+        count++;
+        temp /= 10;
+    }
+    cout << "Number of digits in " << num << " is: " << count << endl;
+    return 0;
+}
+
+2) Find Sum of Digits
+
+int num, sum = 0;
+cout << "Enter a number: ";
+cin >> num;
+int temp = num;
+while (temp != 0) {
+    sum += temp % 10;
+    temp /= 10;
+}
+cout << "Sum of digits: " << sum << endl;
+
+3) Find Product of Digits
+
+int num, product = 1;
+cout << "Enter a number: ";
+cin >> num;
+int temp = num;
+while (temp != 0) {
+    product *= temp % 10;
+    temp /= 10;
+}
+cout << "Product of digits: " << product << endl;
+
+4) Find Max Value in the Digits
+
+int num, maxDigit = 0;
+cout << "Enter a number: ";
+cin >> num;
+int temp = num;
+while (temp != 0) {
+    int digit = temp % 10;
+    if (digit > maxDigit) maxDigit = digit;
+    temp /= 10;
+}
+cout << "Maximum digit: " << maxDigit << endl;
+
+5) Find Even Digits
+
+int num;
+cout << "Enter a number: ";
+cin >> num;
+cout << "Even digits: ";
+int temp = num;
+while (temp != 0) {
+    int digit = temp % 10;
+    if (digit % 2 == 0) cout << digit << " ";
+    temp /= 10;
+}
+cout << endl;
+
+6) Reverse Digits
+
+int num, reversed = 0;
+cout << "Enter a number: ";
+cin >> num;
+int temp = num;
+while (temp != 0) {
+    reversed = reversed * 10 + temp % 10;
+    temp /= 10;
+}
+cout << "Reversed number: " << reversed << endl;
+
+7) Prime or Not
+
+int num, i;
+bool isPrime = true;
+cout << "Enter a number: ";
+cin >> num;
+
+if (num <= 1) isPrime = false;
+for (i = 2; i <= num / 2; i++) {
+    if (num % i == 0) {
+        isPrime = false;
+        break;
+    }
+}
+cout << num << (isPrime ? " is a Prime Number." : " is not a Prime Number.") << endl;
+
+8) Sum of N Numbers
+
+int n, sum = 0;
+cout << "Enter N: ";
+cin >> n;
+for (int i = 1; i <= n; i++) {
+    sum += i;
+}
+cout << "Sum of first " << n << " numbers is: " << sum << endl;
+
+9) Factorial of a Number
+
+int num;
+long long factorial = 1;
+cout << "Enter a number: ";
+cin >> num;
+for (int i = 1; i <= num; i++) {
+    factorial *= i;
+}
+cout << "Factorial of " << num << " is: " << factorial << endl;
+
+10) Neon Number
+
+int num;
+cout << "Enter a number: ";
+cin >> num;
+int square = num * num, sum = 0;
+while (square != 0) {
+    sum += square % 10;
+    square /= 10;
+}
+cout << (sum == num ? "Neon Number" : "Not a Neon Number") << endl;
