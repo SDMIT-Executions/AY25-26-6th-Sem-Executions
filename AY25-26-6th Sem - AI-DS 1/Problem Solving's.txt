@@ -329,3 +329,209 @@ Explanation: You can choose your jumps forming the subsequence [10,4,3] (underli
 Example 3:
 Input: nums = [1,-5,-20,4,-1,3,-6,-3], k = 2
 Output: 0
+
+
+
+24/04/2025 - FN
+1. Valid Anagram
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+Example 1:
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Example 2:
+Input: s = "rat", t = "car"
+Output: false
+
+
+2. Top K Frequent Elements
+Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+
+Input: nums = [1], k = 1
+Output: [1]
+
+Input: nums = [4,4,4,6,6,6,6,3,3,3,3,3], k = 2
+Output: [3,6]
+
+Input: nums = [7,7,7,8,8,9,9,9,10,10,10,10], k = 3
+Output: [7,10,9]
+
+Input: nums = [5,5,6,7,7,7,8,8,8,8,9], k = 4
+Output: [8,7,5,9]
+
+
+
+3. Mahesh and Suresh are playing a new game “Checkers“. This is a very simple game but becomes challenging when more expert players are playing. Below is the description of the game and rules: The game is played by 2 players. This game consists of an N*M matrix. Each of the cells is background lit by lights. And these cells are either Green or Black. The green and black cells are randomly lit and will be represented with 1’s and 0’s respectively. Green cells are the cells that need to be captured. Black cells cannot be captured. Everyone is in the race to capture the maximum number of cells possible.
+In a single chance, a player can capture all those adjacent cells which share an edge. Once there is no adjacent edge the chance breaks and the next player will play.
+Mahesh always starts the game and checks down and right and Suresh is second checks up and left.Both players are playing optimally, find out how many cells Suresh captures.
+Input:
+{1, 0, 1, 0, 1}, 
+{1, 1, 0, 1, 1},
+{0, 1, 0, 1, 0}, 
+{0, 1, 1, 1, 0}, 
+{1, 0, 1, 0, 1}
+Output:
+[7, 0, 1, 0, 2]
+[6, 5, 0, 3, 1]
+[0, 4, 0, 2, 0]
+[0, 3, 2, 1, 0]
+[1, 0, 1, 0, 1]
+
+[1, 0, 1, 0, 1]
+[2, 3, 0, 1, 2]
+[0, 4, 0, 2, 0]
+[0, 5, 6, 7, 0]
+[1, 0, 7, 0, 1]
+Suresh captures 1 cells.
+Input:
+{0, 1, 1},
+{1, 1, 0},
+{1, 0, 1}
+Output:
+[0, 2, 1]
+[2, 1, 0]
+[1, 0, 1]
+
+[0, 1, 2]
+[1, 2, 0]
+[2, 0, 1]
+Suresh captures 0 cells.
+
+
+
+4. Imagine you are a software engineer working on a document editing application. The application allows users to edit and correct typos in their documents. One of the features you are developing is a tool to calculate the minimum number of operations required to transform one word into another. This feature is crucial for suggesting the most efficient edits and corrections to the users.
+Task: Given two words, implement a function that calculates the minimum number of operations required to convert the first word into the second word. The allowed operations are:
+Insert a character
+Delete a character
+Replace a character
+
+Input:
+Two strings word1 and word2 representing the original word and the target word, respectively.
+Output:
+An integer representing the minimum number of operations required to convert word1 into word2.
+
+Example:
+Input: word1 = "horse", word2 = "rose"
+Output: 2
+Explanation:
+To transform "horse" into "rose", the following 2 operations are required:
+  1. Replace 'h' with 'r' -> "rorse"
+  2. Delete 'r' -> "rose"
+
+24/04/2025 - AN
+5. Container With Most Water, You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+Notice that you may not slant the container.
+Example 1:
+Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+
+Example 2:
+Input: height = [1,1]
+Output: 1
+
+
+6. Text-Validation using regex:
+Consider that you are building console interface of customer's loan application where customer used to provide name, pan, aadhaar, email then they will set the password for their account. your role is to validate those information's using regex.
+Example:
+Input:
+Name: "Raz",
+Password: "razak$123",
+Aadhaar: "765456787912",
+PAN: "ABCDE1234F",
+Email: "example@mail.com"
+
+Output:
+Account created
+
+Example:
+Input:
+Name: "Ra",
+Password: "razak$123",
+Aadhaar: "7654567",
+PAN: "ABCDE1234F",
+Email: "example@mail.com"
+
+Output:
+Invalid name,invalid aadhaar
+
+Example:
+Input:
+Name: "Raz",
+Password: "razak123",
+Aadhaar: "765456787912",
+PAN: "ABCDE1234F",
+Email: "example@mail.c"
+
+Output:
+Invalid password, invalid email
+
+
+7. Quick select:
+Consider you are going to inquire about top kth package from placement history of past year companies offered.
+Example:
+Input:[14, 23, 7, 15, 20]
+k = 2
+Output:20
+k = 1
+Output: 23
+k = 5
+Output: 7
+
+
+
+Practice:
+1. Valid Palindrome, A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+Example 1:
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+Example 2:
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+
+Example 3:
+Input: s = " "
+Output: true
+Explanation: s is an empty string "" after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+
+
+
+2. Two Sum II - Input Array Is Sorted
+Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
+
+Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
+
+The tests are generated such that there is exactly one solution. You may not use the same element twice.
+
+Your solution must use only constant extra space.
+Example 1:
+Input: numbers = [2,7,11,15], target = 9
+Output: [1,2]
+Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. 
+We return [1, 2].
+
+Example 2:
+Input: numbers = [2,3,4], target = 6
+Output: [1,3]
+Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. 
+We return [1, 3].
+
+Example 3:
+Input: numbers = [-1,0], target = -1
+Output: [1,2]
+Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. 
+We return [1, 2].
