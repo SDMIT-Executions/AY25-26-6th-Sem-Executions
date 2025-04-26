@@ -1,0 +1,155 @@
+Day 6
+
+1) Remove occurrence of "the" in the sentence.[Zoho]
+Eg1:
+Input:
+Find the sum
+Output:
+Find sum
+
+Eg2: 
+Input:
+The program contains 
+Output:
+program contains
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "the cat jumped over the wall and ran through the field";
+    string target = "the";
+    int pos;
+    while ((pos = str.find(target)) != -1) {
+        str.erase(pos, target.length());
+    }
+    cout << str << endl;
+    return 0;
+}
+
+2) Pangram Checking - sentence contains all the char from a to z
+
+Eg:
+Input:
+The quick brown fox jumps over a lazy dog
+Output:
+The sentence is a pangram.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "abcdefghijklmnopqrstuvwxyz";
+    int flag = 1;
+
+    for (char ch = 'a'; ch <= 'z'; ++ch) {
+        if (str.find(ch) == -1) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag == 0)
+        cout << "No" << endl;
+    else
+        cout << "Yes" << endl;
+    return 0;
+}
+
+3) [Zoho] Given a String with or without special characters find if it is 
+Palindrome or Not..
+No splitting of array must be done or No additional spaces 
+must be used for storing the array..
+
+Eg: RACE CAR
+
+Eg: I DID, DID I ?
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string str = "race car";
+    int set = 1,i=0,j=str.length()-1;
+    while(i<j)
+    {
+        while(!(str[i]>='a' && str[i]<='z'))
+        {
+            i++;
+        }
+        while(!(str[j]>='a' && str[j]<='z'))
+        {
+            j--;
+        }
+        if(str[i]!=str[j])
+        {
+            set=0;
+            break;
+        }
+        else
+        {
+            i++;j--;
+        }
+    }
+    if (set == 0)
+        cout << "No" << endl;
+    else
+        cout << "Yes" << endl;
+    return 0;
+}
+
+4) Character frequency count
+
+
+5) Find Longest Word in String
+
+#include <iostream>
+using namespace std;
+int main() {
+    string input;
+    getline(cin, input);
+    int maxLen = 0, currentLen = 0;
+    int startIndex = 0, maxStartIndex = 0;
+    for (int i = 0; i <= input.length(); ++i) {
+        if (i < input.length() && input[i] != ' ') {
+            currentLen++;
+        } 
+        else 
+        {
+            if (currentLen > maxLen) {
+                maxLen = currentLen;
+            }
+            currentLen = 0;
+        }
+    }
+    cout << "Longest word Length: " << maxLen << endl;
+    return 0;
+}
+
+
+6) Sorting 
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    int arr[]={8,3,6,2,9,11,2,0};
+    int n=8,temp;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
+    return 0;
+}
