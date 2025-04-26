@@ -1,0 +1,276 @@
+Day 5:
+1 Transpose of a Matrix
+Input:
+2 3
+1 2 3
+4 5 6
+Output:
+1 4
+2 5
+3 6
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row,col,i,j;
+    cin>>row>>col;
+    int arr[row][col];
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    for(i=0;i<col;i++)
+    {
+        for(j=0;j<row;j++)
+        {
+            cout<<arr[j][i]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+----------------------------------------------------------------------------------------
+2 Print Boundary Elements
+Input:
+4 4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+
+Output:
+1 2 3 4 5 8 9 12 13 14 15 16
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row,col,i,j;
+    cin>>row>>col;
+    int arr[row][col];
+    int sum;
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            if(i==0||j==0||i==row-1||j==col-1)
+                cout<<arr[i][j]<<" ";
+        }
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------
+
+3 Row-wise Sum
+Input:
+1 2 3
+4 5 6
+7 8 9
+
+Output:
+
+Row 1 sum: 6
+Row 2 sum: 15
+Row 3 sum: 24
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row,col,i,j;
+    cin>>row>>col;
+    int arr[row][col];
+    int sum;
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    for(i=0;i<row;i++)
+    {
+        sum=0;
+        for(j=0;j<col;j++)
+        {
+            sum+=arr[i][j];
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------
+column-wise Sum
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row,col,i,j;
+    cin>>row>>col;
+    int arr[row][col];
+    int sum;
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    for(i=0;i<col;i++)
+    {
+        sum=0;
+        for(j=0;j<row;j++)
+        {
+            sum+=arr[j][i];
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------
+
+Count Vowels in a String(count uppercase and lowercase)
+
+Input: hEllo world
+Output: 3
+
+#include <iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    string firstName = "wElcome";
+    int count=0,i;
+    for(i=0;i<firstName.length();i++)
+    {
+        if(firstName[i]=='a' ||firstName[i]=='A' ||
+           firstName[i]=='e' ||firstName[i]=='E' ||
+           firstName[i]=='i' ||firstName[i]=='I' ||
+           firstName[i]=='o' ||firstName[i]=='O' ||
+           firstName[i]=='u' ||firstName[i]=='u' )
+		{
+		  count++;
+		}
+    }
+    cout<<count;
+    return 0;
+}
+-------------------------------------------------------------------------------------------------
+Reverse a String
+
+Input: hello
+Output: olleh
+
+#include <iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    string txt ="wElcome";
+    char txt1[10];
+    int l=txt.length(),i;
+    for( i=0;i<l;i++)
+    {
+        txt1[l-i-1]=txt[i];
+    }
+    cout<<txt1;
+    return 0;
+}
+---------------------------------------------------------------------------------------------
+Check for Palindrome.
+Explanation: 
+input: madam
+REversed string: madam
+if input==reversed string => palindrome
+else => not a palindrome
+Input: madam
+Output: yes
+---------------------------------------------------------------------------------------------
+Count Words in a Sentence
+Input: This is a simple line
+Output: 5
+
+#include <iostream>
+#include<string>
+#include<cstring>
+using namespace std;
+int main()
+{
+    char s[20]="This is an apple";
+    int count=1,i;
+    for(i=0;i<strlen(s);i++)
+    {
+        if(s[i]==' ')
+           count++;
+    }
+    cout<<count;
+    return 0;
+}
+
+(or)
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s="This is an apple";
+    int count=1,i;
+    for(i=0;i<s.length();i++)
+    {
+        if(s[i]==' ')
+           count++;
+    }
+    cout<<count;
+    return 0;
+}
+---------------------------------------------------------------------------------------------
+Remove All Digits from a String
+Input: h1e2l3l33o444
+output: hello
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s="h1el3l3o444";
+    int i;
+    for(i=0;i<s.length();i++)
+    {
+        if(s[i]>='0' && s[i]<='9')
+        {
+            s.replace(i,1,"");
+            i--;
+        }
+    }
+    cout<<s;
+    return 0;
+}
+---------------------------------------------------------------------------------------------
+Write a program to validate if the provided two strings are anagrams or not. If the two strings are anagrams, then print ‘yes’. Otherwise, print ‘no’.
+Input:
+
+Input 1: 1st string
+Input 2: 2nd string
+
+Output:
+(If they are anagrams, print ‘yes’. Otherwise, ‘no’.)
+
+Example
+
+Input 1: Listen
+Input 2: Silent
+
+Output:
+Yes
