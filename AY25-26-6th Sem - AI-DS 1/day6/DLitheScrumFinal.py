@@ -79,7 +79,6 @@ def addTask(bucket):
 while True:
     print("\n1. Add task\n2. View Bucket\nAny other key to exit")
     choice = input("Enter your choice: ")
-    
     if choice == "2":
         bucket = input("Enter bucket name (todo/progress/done): ")
         viewBucket(bucket)

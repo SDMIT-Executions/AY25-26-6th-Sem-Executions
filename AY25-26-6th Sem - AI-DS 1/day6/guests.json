@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Balaji",
+        "height":187,
+        "weight":98,
+        "gender":"male"
+    },
+    {
+        "name":"Akilesh",
+        "height":176,
+        "weight":78,
+        "gender":"male"
+    },
+    {
+        "name":"Victor",
+        "height":192,
+        "weight":122,
+        "gender":"male"
+    },
+    {
+        "name":"Tanish",
+        "height":170,
+        "weight":63,
+        "gender":"male"
+    }
+]

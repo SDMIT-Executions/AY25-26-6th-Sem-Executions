@@ -1,5 +1,6 @@
 {
-    "todo": [
+    "todo": [],
+    "progress": [
         {
             "id": 12,
             "name": "dfvd",
@@ -7,7 +8,6 @@
             "to": "dvfd"
         }
     ],
-    "progress": [],
     "done": [
         {
             "id": 90,

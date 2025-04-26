@@ -662,3 +662,74 @@ Example 2:
 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 Output: [[1,2],[3,10],[12,16]]
 Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
+
+
+
+
+
+
+
+26/04/2025 - FN
+Implement a task agile scrum board three buckets: 'todo', 'progress', and 'done'. Ensure tasks are added correctly and move sequentially between stages while preventing duplicate entries or invalid transitions.
+Example:
+'todo','alpha'
+added
+'todo','alpha'
+already available
+'progress','alpha'
+added to progress
+'progress','beta'
+not in todo/ already in progress
+'progress','alpha'
+not in todo/ already in progress
+'done','alpha'
+added to done
+'done','alpha'
+not in progress/ already in done
+
+26/04/2024 - AN
+2. perform sentiment analysis of feedbacks which could be loaded from json file
+Text: I love this place!
+Sentiment: Positive (0.625)
+
+Text: Enter text: The service was awful.
+Sentiment: Negative (-1.0)
+
+Text: Enter text: It was okay.
+Sentiment: Positive (0.5)
+
+3. perform bmi calculation in nutritionist center guests record with (name, height(cm), weight, gender) from the json file
+[
+{
+"name":"Balaji","height":187,"weight":98,
+"gender":"male"
+},
+{
+"name":"Victor","height":192,"weight":122,
+"gender":"male"
+}
+]
+Output:
+Balaji BMI 28		Overweight
+Victor BMI 33.16	Obese
+
+4. load csv file and perform data clean by removing non alpha and numeric characters using regex
+sample input.csv
+Alice, 25, New York!!!
+Bob, 30, San Francisco#
+Charlie, 22, Chicago@
+David, 28, *Los Angeles*
+
+
+5. Deep health analysis of finding BMI, BMR
+
+
+Assessment Link:
+https://forms.gle/NeUunHs3Sn73epPt6
+
+
+
+
+
+
+
